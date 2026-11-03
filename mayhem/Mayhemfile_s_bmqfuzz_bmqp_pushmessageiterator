@@ -1,0 +1,9 @@
+project: savantenvs/blazingmq
+target: s_bmqfuzz_bmqp_pushmessageiterator
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/s_bmqfuzz_bmqp_pushmessageiterator/testsuite
+cmds:
+  - cmd: /mayhem/s_bmqfuzz_bmqp_pushmessageiterator
+    libfuzzer: true
+    timeout: 120

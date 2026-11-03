@@ -1,0 +1,9 @@
+project: savantenvs/blazingmq
+target: s_bmqfuzz_bmqt_channelutil_handleread
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/s_bmqfuzz_bmqt_channelutil_handleread/testsuite
+cmds:
+  - cmd: /mayhem/s_bmqfuzz_bmqt_channelutil_handleread
+    libfuzzer: true
+    timeout: 120

@@ -1,0 +1,9 @@
+project: savantenvs/blazingmq
+target: s_bmqfuzz_bmqu_blobutil_readnbytes
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/s_bmqfuzz_bmqu_blobutil_readnbytes/testsuite
+cmds:
+  - cmd: /mayhem/s_bmqfuzz_bmqu_blobutil_readnbytes
+    libfuzzer: true
+    timeout: 120
